@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="index.css">
+	<title>Document</title>
+</head>
+<body>
+<div class="container">
+    <h1>Generate a <br /><span>random password</span></h1>
+    <h3>Never use a insecure password again.</h3>
+    <section class="button-container">
+        <button id="genPassBtn">Generate passwords</button>
+        <section class="options-container">
+            <div>
+                <label for="passwordLength">Length: </label>
+                <input name="passwordLength" id="passwordLength" type="number" value="15" min="8" max="20" step="1">
+            </div>
+            <div>
+                <label for="passwordLength">Symbols: </label>
+                <input id="toggleSymbols" name="toggleSymbols" type="checkbox" checked>
+            </div>
+            <div>
+                <label for="passwordLength">Numbers: </label>
+                <input id="toggleNumbers" name="toggleNumbers" type="checkbox" checked>
+            </div>
+        </section>
+    </section>
+    <div class="line"></div>
+    <section class="text-display-container">
+        <div id="textDisplay1"></div>
+        <div id="textDisplay2"></div>
+        <h3 id="alertEl"></h3>
+    </section>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

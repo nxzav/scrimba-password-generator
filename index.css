@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@800&display=swap');
+
+:root {
+  --p-font: 'Karla', sans-serif;
+  --s-font: 'Inter', sans-serif;
+  --bg: #1c1c1c;
+  --dark: #1f2937;
+  --blue: #273549;
+  --gray: #d5d4d8;
+  --green: #4adf86;
+  --green-dm: #10b981;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  font-family: var(--s-font);
+  font-weight: lighter;
+  color: var(--gray);
+}
+
+.container {
+  display: flex;
+  width: min(550px, 95%);
+  height: 550px;
+  padding: 2rem 3.25rem;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  background-color: var(--dark);
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  font-family: var(--p-font);
+  color: white;
+}
+
+h1 > span {
+  color: var(--green);
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 3.25rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+button {
+  display: block;
+  width: 190px;
+  margin-bottom: 1rem;
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  font-family: var(--s-font);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: var(--green-dm);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+label, input {
+    margin-right: 0.5rem;
+}
+
+.options-container {
+    display: flex;
+    align-items: center;
+}
+
+#passwordLength {
+  width: 60px;
+  height: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--blue);
+  line-height: 2.5rem;
+  color: var(--green);
+}
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid var(--blue);
+  margin: 2.2rem 0;
+}
+
+.text-display-container {
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+  column-gap: 2rem;
+}
+
+#textDisplay1,
+#textDisplay2 {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 6px;
+  background-color: var(--blue);
+  text-align: center;
+  line-height: 2.5rem;
+  color: var(--green);
+}
+
+#textDisplay1:hover,
+#textDisplay2:hover {
+    cursor: pointer;
+}
+
+#alertEl {
+    position: absolute;
+    top: 60px;
+    font-size: 0.875rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        height: fit-content;
+    }
+    .options-container {
+        flex-direction: column;
+        align-items: flex-start;
+        grid-row-gap: 10px;
+    }
+    .text-display-container {
+        flex-direction: column;
+        grid-row-gap: 10px;
+    }
+}
